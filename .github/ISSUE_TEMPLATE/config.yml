@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: Private support or security concern
-    url: mailto:support@meshtail.app?subject=Meshtail%20support
+    url: https://github.com/meshtailapp/meshtail-issues#private-support
     about: Email support@meshtail.app. Do not post private diagnostics or security-sensitive details in a public issue.
