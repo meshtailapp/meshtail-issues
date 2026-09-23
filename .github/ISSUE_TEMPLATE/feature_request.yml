@@ -1,0 +1,29 @@
+name: Feature request
+description: Suggest an improvement to Meshtail.
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing requests first. This is a public discussion; do not include private radio information, messages, keys, or locations.
+        For private support or security concerns, email support@meshtail.app.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the task you are trying to accomplish.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested improvement
+      description: Explain how it should work, including offline use when relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or examples
+      description: Optional. Explain any workaround or share an example without private data.
