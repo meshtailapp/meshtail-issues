@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071321">
+  <meta name="description" content="Meshtail privacy policy: how the app handles local data, optional online features, crash reports, and support requests.">
+  <title>Privacy Policy · Meshtail</title>
+  <style>
+    :root { color-scheme: dark; --bg:#071321; --panel:#0d1d2e; --line:#1d3448; --text:#e9f3fa; --muted:#a7bbcb; --blue:#58a9ff; --teal:#58dfcf; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:radial-gradient(ellipse at 50% -18%, #173c5b 0, transparent 55%), var(--bg); color:var(--text); font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:#8ac5ff; text-decoration-thickness:1px; text-underline-offset:3px; }
+    a:hover { color:var(--teal); }
+    a:focus-visible { outline:3px solid var(--teal); outline-offset:4px; border-radius:2px; }
+    .wrap { width:min(100% - 32px, 850px); margin:0 auto; padding:44px 0 72px; }
+    header { padding:0 0 30px; border-bottom:1px solid var(--line); }
+    .brand { display:inline-flex; align-items:center; gap:10px; color:var(--text); font-weight:700; letter-spacing:.02em; }
+    .mark { width:12px; height:12px; border:3px solid var(--teal); border-radius:50%; box-shadow:0 0 18px #58dfcf66; }
+    .eyebrow { margin:28px 0 5px; color:var(--teal); font-size:.78rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(2rem,6vw,3.15rem); line-height:1.12; letter-spacing:-.035em; }
+    .effective { margin:13px 0 0; color:var(--muted); font-size:.94rem; }
+    main { padding-top:8px; }
+    section { padding:25px 0 24px; border-bottom:1px solid var(--line); }
+    h2 { margin:0 0 10px; color:#f5fbff; font-size:1.25rem; line-height:1.35; letter-spacing:-.01em; }
+    p { margin:0 0 13px; color:#d1deea; }
+    p:last-child { margin-bottom:0; }
+    .intro { margin-top:20px; padding:17px 19px; border:1px solid #24465d; border-left:3px solid var(--teal); border-radius:9px; background:#0d2132cc; }
+    .intro p { color:var(--text); }
+    footer { padding-top:25px; color:var(--muted); font-size:.9rem; }
+    @media (min-width:700px) { .wrap { padding-top:58px; } section { padding:29px 0 27px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><span class="mark" aria-hidden="true"></span>Meshtail</div>
+      <p class="eyebrow">Privacy</p>
+      <h1>Privacy Policy</h1>
+      <p class="effective">Effective September 23, 2026</p>
+    </header>
+    <main>
+      <div class="intro"><p>Meshtail is a companion app for MeshCore radios, operated by Meshtail. Questions or deletion requests: <a href="mailto:support@meshtail.app">support@meshtail.app</a>.</p></div>
+
+      <section aria-labelledby="device-radio"><h2 id="device-radio">Data on your device and radio</h2>
+        <p>Meshtail stores app settings, radio connection details, contacts, chats, map downloads and caches, and activity/diagnostic history on your device so the app can work off-grid. You can clear message and heard history, map data, and other saved app data using the app's controls; uninstalling removes app-managed local data unless you or your device have kept a backup. Exported files and backups remain wherever you save or share them.</p>
+        <p>When you connect over Bluetooth, USB, or local Wi-Fi, Meshtail exchanges data with your radio. Messages, location advertisements, and other transmissions you choose to make can travel through the MeshCore network and be received or relayed by other radios or room servers. Meshtail does not operate those networks or control what other participants retain. Do not treat a public mesh transmission as private.</p>
+        <p>The app requests Nearby devices/Bluetooth access to find and connect to radios, location access for phone GPS and map features (and where Android requires it for Bluetooth discovery), and notification/background permissions for message alerts and an optional persistent connection. Location is not sent to Meshtail servers. If you choose to share or advertise a location over the mesh, recipients can see it.</p>
+      </section>
+
+      <section aria-labelledby="internet"><h2 id="internet">Optional internet access</h2>
+        <p>Meshtail asks before its optional internet features run. Offline-only mode blocks new app-initiated optional third-party requests; requests already started or queued may complete. Already downloaded map tiles can still be shown. Turning on internet access does not itself publish your chats or radio keys.</p>
+        <p>If you use online maps or download offline areas, the selected tile provider (OpenStreetMap, CARTO, Esri, OpenTopoMap, or Coalition) receives tile requests that indicate the map area and your IP address. Elevation/line-of-sight lookups send requested coordinates to Open-Meteo. Link previews, inline images, and links you choose to open contact their destination providers, which can see your IP address and the requested URL or area. Direct-APK update checks contact ve6btc.com; firmware-release checks may contact GitHub. Providers handle data under their own policies. Cached map tiles and downloaded areas stay on your device until you clear them or uninstall the app.</p>
+      </section>
+
+      <section aria-labelledby="crashes"><h2 id="crashes">Optional crash reports</h2>
+        <p>Android crash reporting through Google Firebase Crashlytics is off by default. It requires both your “Share crash reports” choice and online access; you can turn it off in Settings. A report can include error types, stack traces, native exception messages, app version, device/OS information, timestamps, and installation identifiers. Meshtail does not intentionally attach chats, contacts, radio keys, precise location, or raw radio logs, but native exception messages may contain unexpected details. Usage analytics is not enabled.</p>
+        <p>Turning reporting off blocks new optional submissions and requests deletion of reports still pending on the device. SDK work already started or queued may complete, and reports already sent cannot be recalled. Firebase states that Crashlytics keeps reports and associated identifiers for 90 days before beginning removal from live and backup systems. See <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a> for its current processing and retention details.</p>
+      </section>
+
+      <section aria-labelledby="support"><h2 id="support">Support and public reports</h2>
+        <p>“Need help?” opens a draft in your email app. A diagnostics attachment is made only if you choose it; you review and send the message yourself. That file can include app/firmware and radio details, battery level, activity and error text, shortened node identifiers, repeater health, and node/channel names. It does not intentionally include passwords or radio keys. Email providers process messages under their own policies. We keep support correspondence only as long as needed to respond, investigate, and meet applicable obligations; email us to request deletion, subject to those obligations.</p>
+        <p>“Report a bug” opens a public GitHub form. Meshtail prefills only app version, platform, and distribution. It does not automatically post a report or attach diagnostics. Anything you submit there is public and subject to GitHub's terms and retention rules. Send private logs or security concerns by email instead.</p>
+      </section>
+
+      <section aria-labelledby="choices"><h2 id="choices">Your choices and contact</h2>
+        <p>You can deny permissions, use Offline-only, disable crash reporting, clear locally stored data, and choose whether to send support material. Turning off crash reports cannot recall queued or in-flight submissions. For access or deletion requests concerning data we receive, write to <a href="mailto:support@meshtail.app">support@meshtail.app</a>. We may update this policy when app behavior changes; the effective date above will change with it.</p>
+      </section>
+    </main>
+    <footer><p>Meshtail · Privacy questions: <a href="mailto:support@meshtail.app">support@meshtail.app</a></p></footer>
+  </div>
+</body>
+</html>

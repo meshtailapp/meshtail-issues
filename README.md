@@ -1,6 +1,8 @@
 # Meshtail issue tracker
 
-Report bugs and suggest improvements for Meshtail, a companion app for MeshCore. This repository contains reporting forms only, not the application source.
+Report bugs and suggest improvements for Meshtail, a companion app for MeshCore. This repository contains reporting forms and support documents, not the application source.
+
+See the [Meshtail privacy policy](https://meshtailapp.github.io/meshtail-issues/privacy/) for details about local data, optional online features, and support reports.
 
 - [Report a bug](https://github.com/meshtailapp/meshtail-issues/issues/new?template=bug_report.yml)
 - [Suggest an improvement](https://github.com/meshtailapp/meshtail-issues/issues/new?template=feature_request.yml)
