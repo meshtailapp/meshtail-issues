@@ -50,7 +50,14 @@
       </section>
 
       <section aria-labelledby="explore"><h2 id="explore">Explore without a radio</h2>
-        <p>At the Connect screen, choose “Explore without a radio” to open a read-only preview. It uses fictional sample conversations and sample node information so reviewers can inspect the interface without hardware. The preview is not a full simulator: it does not connect to a mesh, transmit or receive messages, test coverage, or demonstrate live radio features.</p>
+        <p>In version 1.2.46 (58) or later, choose “Explore without a radio” on Connect, then “Get started.” The labelled review mode uses a simulated companion with fictional contacts, conversations, rooms and repeaters. It runs the normal app screens and command handling without opening Bluetooth, USB, TCP or radio connections. Earlier versions offer only a read-only preview.</p>
+        <ol>
+          <li>Accept the community terms and choose whether to share crash reports. Bluetooth, location and notification permissions may be denied for this walkthrough.</li>
+          <li>Use Chats to view and send sample messages. Open Network &gt; Rooms &gt; Ranger Station; use the sample password <code>hello</code> or leave it blank. Leave “Remember password” off. Room history and replies are simulated.</li>
+          <li>Explore sample repeater details, telemetry and tools. Their sample password is also <code>hello</code> or blank.</li>
+          <li>The persistent review banner has Help and Exit. Exit, or Android Back from the home screen, returns to normal Connect.</li>
+        </ol>
+        <p>Sample settings, credentials and messages are held in memory and discarded on exit. Review map tiles use a separate cache. This walkthrough does not test RF coverage, real message delivery, Bluetooth reliability, GPS, or the connected-device foreground service. Those functions require their normal platform and hardware conditions; the separate video below demonstrates the foreground-service controls.</p>
         <p>Contacts, conversations, settings, and other app data are stored locally on your device. There is no Meshtail login, and the app does not sell in-app purchases.</p>
         <p>The demonstration below uses a local firmware simulator connected over TCP to an Android emulator. It demonstrates the app's TCP software path only; it is not evidence of Bluetooth operation, RF transmission, or real-world mesh coverage.</p>
       </section>
