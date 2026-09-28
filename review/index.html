@@ -57,6 +57,7 @@
 
       <section aria-labelledby="background"><h2 id="background">Keeping an Android radio connection active</h2>
         <p>To keep a user-started radio connection active when Meshtail is in the background, first connect to a radio from the app, then open Settings &gt; App and turn on “Keep connected in background.” Android uses a connected-device foreground service while maintaining the connection and shows an ongoing notification.</p>
+        <p>The service supports the active companion connection while the app is off-screen, allowing incoming radio events to be processed without waiting for the user to reopen Meshtail. Radio I/O remains in the app's main isolate. Android power management can still affect background operation; this is not a guarantee against process termination.</p>
         <p>Turn “Keep connected in background” off to stop the foreground service and remove its ongoing notification. This setting does not connect a radio by itself; the radio connection is started by the user in Meshtail.</p>
       </section>
 
@@ -68,10 +69,10 @@
       <section aria-labelledby="demonstration"><h2 id="demonstration">Background connection demonstration</h2>
         <p>Meshtail 1.2.45 (57), Android emulator, fictional companion “Alice.” The recording shows enabling background connection, leaving the app, its ongoing connection notification, returning, and turning background connection off. Battery-optimization exemption is declined during this demonstration.</p>
         <video controls preload="metadata" style="display:block;width:100%;max-height:720px;background:#000" aria-label="Meshtail background connection demonstration">
-          <source src="meshtail-background.mp4" type="video/mp4">
-          <a href="meshtail-background.mp4">Open the demonstration video</a>
+          <source src="meshtail-background-captioned.mp4" type="video/mp4">
+          <a href="meshtail-background-captioned.mp4">Open the demonstration video</a>
         </video>
-        <p><a href="meshtail-background.mp4">Direct video link</a>. 71 seconds, no audio; idle waits have been shortened without changing the order of actions. The Android System serial-console notice belongs to the emulator, not Meshtail. The demonstration does not replace the hardware needed to exercise live mesh features.</p>
+        <p><a href="meshtail-background-captioned.mp4">Direct captioned video link</a>. About 30 seconds, no audio; idle waits are removed without changing the order of actions. Captions explain the foreground service's purpose and user controls. The Android System serial-console notice belongs to the emulator, not Meshtail. This demonstrates the service lifecycle, not actual background message delivery or RF/Bluetooth performance.</p>
       </section>
     </main>
     <footer><p>Questions or support: <a href="mailto:support@meshtail.app">support@meshtail.app</a></p></footer>
