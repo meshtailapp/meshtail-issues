@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071321">
+  <meta name="description" content="Reviewer and support information for Meshtail, a companion app for MeshCore radios.">
+  <title>Reviewer and Support · Meshtail</title>
+  <style>
+    :root { color-scheme:dark; --bg:#071321; --panel:#0d1d2e; --line:#1d3448; --text:#e9f3fa; --muted:#a7bbcb; --blue:#58a9ff; --teal:#58dfcf; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:radial-gradient(ellipse at 50% -18%, #173c5b 0, transparent 55%), var(--bg); color:var(--text); font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:#8ac5ff; text-decoration-thickness:1px; text-underline-offset:3px; }
+    a:hover { color:var(--teal); }
+    a:focus-visible { outline:3px solid var(--teal); outline-offset:4px; border-radius:2px; }
+    .wrap { width:min(100% - 32px, 850px); margin:0 auto; padding:44px 0 72px; }
+    header { padding:0 0 30px; border-bottom:1px solid var(--line); }
+    .brand { display:inline-flex; align-items:center; gap:10px; color:var(--text); font-weight:700; letter-spacing:.02em; }
+    .mark { width:12px; height:12px; border:3px solid var(--teal); border-radius:50%; box-shadow:0 0 18px #58dfcf66; }
+    .eyebrow { margin:28px 0 5px; color:var(--teal); font-size:.78rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(2rem,6vw,3.15rem); line-height:1.12; letter-spacing:-.035em; }
+    .lede { margin:13px 0 0; color:var(--muted); font-size:.98rem; }
+    main { padding-top:8px; }
+    section { padding:25px 0 24px; border-bottom:1px solid var(--line); }
+    h2 { margin:0 0 10px; color:#f5fbff; font-size:1.25rem; line-height:1.35; letter-spacing:-.01em; }
+    p { margin:0 0 13px; color:#d1deea; }
+    p:last-child { margin-bottom:0; }
+    .intro { margin-top:20px; padding:17px 19px; border:1px solid #24465d; border-left:3px solid var(--teal); border-radius:9px; background:#0d2132cc; }
+    .intro p { color:var(--text); }
+    footer { padding-top:25px; color:var(--muted); font-size:.9rem; }
+    @media (min-width:700px) { .wrap { padding-top:58px; } section { padding:29px 0 27px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><span class="mark" aria-hidden="true"></span>Meshtail</div>
+      <p class="eyebrow">Review information</p>
+      <h1>Reviewer and Support</h1>
+      <p class="lede">What Meshtail does, what hardware is needed, and how to explore without a radio.</p>
+    </header>
+    <main>
+      <div class="intro"><p>Meshtail is a companion app for MeshCore radios. It connects to a compatible radio over Bluetooth, USB, or WiFi / TCP. Meshtail does not require a Meshtail account or offer purchases.</p></div>
+
+      <section aria-labelledby="live"><h2 id="live">Live radio features</h2>
+        <p>Live mesh features require a compatible MeshCore Companion radio and a supported connection from your phone or device. Your phone by itself cannot transmit or receive mesh radio messages. With a radio connected, Meshtail can use the radio for supported conversations, contact and node information, and radio-dependent tools. Availability depends on the radio, firmware, connection, and mesh conditions.</p>
+        <p>Bluetooth and WiFi / TCP connect to a compatible radio; USB / Serial requires a supported radio, cable, and device connection. Meshtail does not provide radio hardware, network coverage, or a mesh service. No login or purchase is needed to use the app.</p>
+      </section>
+
+      <section aria-labelledby="explore"><h2 id="explore">Explore without a radio</h2>
+        <p>At the Connect screen, choose “Explore without a radio” to open a read-only preview. It uses fictional sample conversations and sample node information so reviewers can inspect the interface without hardware. The preview is not a full simulator: it does not connect to a mesh, transmit or receive messages, test coverage, or demonstrate live radio features.</p>
+        <p>Contacts, conversations, settings, and other app data are stored locally on your device. There is no Meshtail login, and the app does not sell in-app purchases.</p>
+        <p>The demonstration below uses a local firmware simulator connected over TCP to an Android emulator. It demonstrates the app's TCP software path only; it is not evidence of Bluetooth operation, RF transmission, or real-world mesh coverage.</p>
+      </section>
+
+      <section aria-labelledby="background"><h2 id="background">Keeping an Android radio connection active</h2>
+        <p>To keep a user-started radio connection active when Meshtail is in the background, first connect to a radio from the app, then open Settings &gt; App and turn on “Keep connected in background.” Android uses a connected-device foreground service while maintaining the connection and shows an ongoing notification.</p>
+        <p>Turn “Keep connected in background” off to stop the foreground service and remove its ongoing notification. This setting does not connect a radio by itself; the radio connection is started by the user in Meshtail.</p>
+      </section>
+
+      <section aria-labelledby="data"><h2 id="data">Local data and optional online diagnostics</h2>
+        <p>Contacts and messages are stored on the device. Mesh transmissions you choose to make can be received or relayed by other radios or room servers; do not treat public mesh traffic as private. Meshtail does not operate or control those networks.</p>
+        <p>Optional crash reporting is off by default and can be enabled by the user. It requires the user's “Share crash reports” choice and online access. The app also asks before optional internet features run. See the <a href="../privacy/">Privacy Policy</a> for details about local data, network requests, and support materials.</p>
+      </section>
+
+      <section aria-labelledby="demonstration"><h2 id="demonstration">Background connection demonstration</h2>
+        <p>Meshtail 1.2.45 (57), Android emulator, fictional companion “Alice.” The recording shows enabling background connection, leaving the app, its ongoing connection notification, returning, and turning background connection off. Battery-optimization exemption is declined during this demonstration.</p>
+        <video controls preload="metadata" style="display:block;width:100%;max-height:720px;background:#000" aria-label="Meshtail background connection demonstration">
+          <source src="meshtail-background.mp4" type="video/mp4">
+          <a href="meshtail-background.mp4">Open the demonstration video</a>
+        </video>
+        <p><a href="meshtail-background.mp4">Direct video link</a>. 71 seconds, no audio; idle waits have been shortened without changing the order of actions. The Android System serial-console notice belongs to the emulator, not Meshtail. The demonstration does not replace the hardware needed to exercise live mesh features.</p>
+      </section>
+    </main>
+    <footer><p>Questions or support: <a href="mailto:support@meshtail.app">support@meshtail.app</a></p></footer>
+  </div>
+</body>
+</html>
