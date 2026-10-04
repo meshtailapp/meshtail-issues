@@ -1,0 +1,60 @@
+name: Language request
+description: Request another interface language for Meshtail.
+title: "[Language] "
+labels: [enhancement]
+assignees: [meshtailapp]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us which interface language would make Meshtail more useful. Search existing language requests first.
+        **Reports and attachments here are public.** Do not include private messages, names, radio/channel keys, identifiers, locations, or logs.
+        The app can prefill its version; it does not attach messages, diagnostics, screenshots, or account details. You review and submit this form yourself.
+        For private support or security concerns, email **support@meshtail.app** instead.
+  - type: input
+    id: requested-language
+    attributes:
+      label: Requested language
+      description: Include a regional variant if it matters.
+      placeholder: "Example: Portuguese (Brazil)"
+    validations:
+      required: true
+  - type: input
+    id: autonym
+    attributes:
+      label: Language name in that language
+      description: Optional. Also called the language's autonym.
+      placeholder: "Example: Português (Brasil)"
+  - type: input
+    id: language-tag
+    attributes:
+      label: Language tag, if known
+      description: Optional. A language or locale code can help identify a regional variant.
+      placeholder: "Example: pt-BR"
+  - type: textarea
+    id: context
+    attributes:
+      label: How would this language help?
+      description: Describe which parts of the interface you would use and any regional wording needs. Personal details are not necessary.
+    validations:
+      required: true
+  - type: textarea
+    id: translation-help
+    attributes:
+      label: Optional translation help
+      description: If interested, say whether you could suggest wording or review translations. No commitment or contact details are required.
+  - type: input
+    id: app-version
+    attributes:
+      label: Meshtail version and build
+      description: Shown in Settings > Diagnostics & about. Correct the prefilled value if necessary.
+      placeholder: "Example: 1.2.54 (67)"
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked existing requests for this language.
+          required: true
+        - label: I understand this request is public and have removed private information from its text and attachments.
+          required: true

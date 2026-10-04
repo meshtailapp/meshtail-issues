@@ -1,0 +1,70 @@
+name: Translation correction
+description: Report incorrect, missing, or unclear text in a Meshtail translation.
+title: "[Translation] "
+labels: [bug]
+assignees: [meshtailapp]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help improve Meshtail's translations. Search existing reports first, and report one text correction per issue.
+        **Reports and attachments here are public.** Include only app interface text. Do not include private messages, names, radio/channel keys, identifiers, precise locations, or unreviewed logs.
+        The app can prefill its version and interface language; it does not attach report text, screenshots, or diagnostics. You review and submit this form yourself.
+        For private support or security concerns, email **support@meshtail.app** instead.
+  - type: input
+    id: language
+    attributes:
+      label: Interface language
+      description: Include the language and region, if relevant. Correct the prefilled value if necessary.
+      placeholder: "Example: French (Canada), fr-CA"
+    validations:
+      required: true
+  - type: input
+    id: screen
+    attributes:
+      label: Screen or feature
+      description: Where does the text appear? Include enough navigation detail to find it.
+      placeholder: "Example: Settings > App > Language"
+    validations:
+      required: true
+  - type: textarea
+    id: current-text
+    attributes:
+      label: Current text in the app
+      description: Copy only the interface wording that needs correction, without any private content.
+    validations:
+      required: true
+  - type: textarea
+    id: original-text
+    attributes:
+      label: Original English text, if known
+      description: Optional. Include the English interface wording if it helps identify the translation.
+  - type: textarea
+    id: suggested-correction
+    attributes:
+      label: Suggested correction
+      description: Provide the wording you suggest and briefly explain the meaning, grammar, or context that needs fixing.
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: Meshtail version and build
+      description: Shown in Settings > Diagnostics & about. Correct the prefilled value if necessary.
+      placeholder: "Example: 1.2.54 (67)"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Optional redacted screenshot
+      description: Attach a screenshot only if useful. Crop or redact private names, messages, identifiers, keys, and locations first. Do not attach logs or app backups.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked existing reports for this translation problem.
+          required: true
+        - label: I understand this report is public and have removed private information from its text and attachments.
+          required: true
