@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071321">
+  <meta name="description" content="Privacybeleid van Meshtail">
+  <title>Privacybeleid van Meshtail</title>
+  <style>
+    :root { color-scheme: dark; --bg:#071321; --panel:#0d1d2e; --line:#1d3448; --text:#e9f3fa; --muted:#a7bbcb; --blue:#58a9ff; --teal:#58dfcf; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:radial-gradient(ellipse at 50% -18%, #173c5b 0, transparent 55%), var(--bg); color:var(--text); font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:#8ac5ff; text-decoration-thickness:1px; text-underline-offset:3px; }
+    a:hover { color:var(--teal); }
+    a:focus-visible { outline:3px solid var(--teal); outline-offset:4px; border-radius:2px; }
+    .wrap { width:min(100% - 32px, 850px); margin:0 auto; padding:44px 0 72px; }
+    header { padding:0 0 30px; border-bottom:1px solid var(--line); }
+    .brand { display:inline-flex; align-items:center; gap:10px; color:var(--text); font-weight:700; letter-spacing:.02em; }
+    .mark { width:12px; height:12px; border:3px solid var(--teal); border-radius:50%; box-shadow:0 0 18px #58dfcf66; }
+    .eyebrow { margin:28px 0 5px; color:var(--teal); font-size:.78rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(2rem,6vw,3.15rem); line-height:1.12; letter-spacing:-.035em; }
+    .effective { margin:13px 0 0; color:var(--muted); font-size:.94rem; }
+    main { padding-top:8px; }
+    section { padding:25px 0 24px; border-bottom:1px solid var(--line); }
+    h2 { margin:0 0 10px; color:#f5fbff; font-size:1.25rem; line-height:1.35; letter-spacing:-.01em; }
+    p { margin:0 0 13px; color:#d1deea; }
+    p:last-child { margin-bottom:0; }
+    .intro { margin-top:20px; padding:17px 19px; border:1px solid #24465d; border-left:3px solid var(--teal); border-radius:9px; background:#0d2132cc; }
+    .intro p { color:var(--text); }
+    footer { padding-top:25px; color:var(--muted); font-size:.9rem; }
+    @media (min-width:700px) { .wrap { padding-top:58px; } section { padding:29px 0 27px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+    .language-nav { margin-top:24px; }
+    .language-nav ul { display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; list-style:none; }
+    .language-nav a { display:inline-block; padding:9px 12px; border:1px solid var(--line); border-radius:6px; }
+    .language-nav a[aria-current="page"] { color:var(--text); font-weight:700; border-color:var(--teal); }
+    .skip-link { position:absolute; left:16px; top:-100px; padding:12px 16px; background:var(--panel); z-index:10; }
+    .skip-link:focus { top:12px; }
+    .scope { color:var(--muted); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#policy-content">Ga naar het privacybeleid</a>
+  <div class="wrap">
+    <header>
+      <div class="brand"><span class="mark" aria-hidden="true"></span>Meshtail</div>
+      <p class="eyebrow">Privacy</p>
+      <h1>Privacybeleid van Meshtail</h1>
+      <p class="effective">Van kracht vanaf 8 oktober 2026</p>
+      <nav class="language-nav" aria-label="Taal van het privacybeleid">
+        <ul>
+          <li><a href="../" lang="en" hreflang="en">English</a></li>
+          <li><a href="../de/" lang="de" hreflang="de">Deutsch</a></li>
+          <li><a href="../nl/" lang="nl" hreflang="nl" aria-current="page">Nederlands</a></li>
+          <li><a href="../fr/" lang="fr" hreflang="fr">Français</a></li>
+          <li><a href="../pl/" lang="pl" hreflang="pl">Polski</a></li>
+          <li><a href="../ru/" lang="ru" hreflang="ru">Русский</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="policy-content" tabindex="-1">
+      <div class="intro"><p>Meshtail is een begeleidende app voor MeshCore-radio’s, beheerd door Meshtail. Vragen of verwijderingsverzoeken: <a href="mailto:support@meshtail.app">support@meshtail.app</a>.</p></div>
+
+      <section aria-labelledby="device-radio"><h2 id="device-radio">Gegevens op je apparaat en radio</h2>
+        <p>Meshtail bewaart appinstellingen, radioverbindingsgegevens, contacten, chats, kaartdownloads en caches, en activiteits-/diagnosegeschiedenis op je apparaat zodat de app zonder internet kan werken. Je kunt bericht- en ontvangstgeschiedenis, kaartgegevens en andere opgeslagen appgegevens wissen via de app. Verwijderen van de app wist de lokale gegevens die de app beheert, tenzij jij of je apparaat een back-up heeft bewaard. Geëxporteerde bestanden en back-ups blijven waar je ze opslaat of deelt.</p>
+        <p>Bij verbinding via Bluetooth, USB of lokale wifi wisselt Meshtail gegevens uit met je radio. Berichten, locatieaankondigingen en andere uitzendingen die je kiest, kunnen via het MeshCore-netwerk reizen en door andere radio’s of roomservers worden ontvangen of doorgestuurd. Meshtail beheert die netwerken niet en bepaalt niet wat andere deelnemers bewaren. Beschouw een openbare meshuitzending niet als privé.</p>
+        <p>De app vraagt toegang tot apparaten in de buurt/Bluetooth om radio’s te vinden en ermee te verbinden, locatietoegang voor de gps van de telefoon en kaartfuncties (en waar Android dit vereist voor Bluetooth-detectie), en meldings-/achtergrondrechten voor berichtmeldingen en een optionele blijvende verbinding. Locatie wordt niet naar Meshtail-servers gestuurd. Als je een locatie via het meshnetwerk deelt of aankondigt, kunnen ontvangers die zien.</p>
+      </section>
+
+      <section aria-labelledby="internet"><h2 id="internet">Optionele internettoegang</h2>
+        <p>Meshtail vraagt toestemming voordat optionele internetfuncties worden uitgevoerd. Alleen offline blokkeert nieuwe optionele verzoeken aan derden die de app start; reeds gestarte of in de wachtrij geplaatste verzoeken kunnen nog worden voltooid. Al gedownloade kaarttegels kunnen zichtbaar blijven. Internettoegang inschakelen publiceert op zichzelf geen chats of radiosleutels.</p>
+        <p>Als je online kaarten gebruikt of offline gebieden downloadt, ontvangt de gekozen tegelaanbieder (OpenStreetMap, CARTO, Esri, OpenTopoMap of Coalition) tegelverzoeken die het kaartgebied en je IP-adres aangeven. Hoogte-/zichtlijnopvragen sturen de gevraagde coördinaten naar Open-Meteo. Linkvoorbeelden, inline afbeeldingen en links die je opent maken contact met hun bestemmingsaanbieders, die je IP-adres en de gevraagde URL of het gebied kunnen zien. Updatecontroles voor rechtstreekse APK-installaties maken contact met ve6btc.com; controles op firmwarereleases kunnen GitHub benaderen. Aanbieders verwerken gegevens volgens hun eigen beleid. Gecachte kaarttegels en gedownloade gebieden blijven op je apparaat tot je ze wist of de app verwijdert.</p>
+      </section>
+
+      <section aria-labelledby="crashes"><h2 id="crashes">Optionele crashrapporten</h2>
+        <p>Android-crashrapportage via Google Firebase Crashlytics staat standaard uit. Zowel je keuze ‘Crashrapporten delen’ als internettoegang is vereist; je kunt rapportage uitschakelen in Instellingen. Een rapport kan foutcategorieën en gefilterde stackframes, appversie, apparaat- en besturingssysteemgegevens, tijdstempels en installatie- en sessie-ID’s van Firebase/Crashlytics bevatten. Native rapporten kunnen ook uitzonderingsberichten en gegevens over threads en de toestand bij de crash bevatten. Bij verbindingsfouten of andere operationele fouten kan Meshtail beperkte diagnosegegevens toevoegen, zoals een bewerkingscategorie, een vaste verbindingsstap en -fase, resultaat, verstreken tijd, een numerieke platformfoutcode en een proceslokale sessieteller. BLE-rapporten kunnen ook de onderhandelde Bluetooth-MTU bevatten. Indien beschikbaar kunnen een algemene radiomodelcategorie, numerieke firmwareversie en protocolversie worden opgenomen. Meshtail voegt niet bewust radionamen, adressen, openbare sleutels, ruwe frames, aangepaste firmwarelabels, chats, contacten, precieze locatie of ruwe radiologboeken toe aan de diagnostische context. Fouttekst of native uitzonderingsberichten kunnen toch onverwachte details bevatten. Gebruiksstatistieken hebben een afzonderlijke toestemmingsoptie in Instellingen.</p>
+        <p>Rapportage uitschakelen blokkeert nieuwe optionele inzendingen en vraagt om verwijdering van rapporten die nog op het apparaat wachten. SDK-werk dat al is gestart of in de wachtrij staat kan worden voltooid, en verzonden rapporten kunnen niet worden teruggehaald. Volgens Firebase bewaart Crashlytics rapporten en bijbehorende ID’s 90 dagen voordat verwijdering uit live- en back-upsystemen begint; verwijderen kan extra tijd kosten. Firebase-diensten kunnen gegevens op wereldwijde infrastructuur verwerken. Raadpleeg de privacyinformatie van Firebase voor actuele details over gegevens, verwerking en bewaartermijnen.</p>
+        <p><a href="https://firebase.google.com/support/privacy">Privacyinformatie van Firebase</a></p>
+      </section>
+
+      <section aria-labelledby="analytics"><h2 id="analytics">Optionele gebruiksstatistieken</h2>
+        <p class="scope">Het onderdeel over optionele gebruiksstatistieken geldt voor Meshtail 1.2.55 (68) en latere versies met deze instelling, op Android 9 of hoger.</p>
+        <p>Google Firebase Analytics staat los van crashrapportage en is standaard uitgeschakeld. Zowel je afzonderlijke toestemming voor gebruiksstatistieken in Instellingen als internettoegang is vereist. Bij weigering blijven alle functies beschikbaar. Analytics ontvangt de app-/systeemtaal, beperkte resultaten van bewerkingen, installatie-/sessie-ID&#x27;s, apparaat-, besturingssysteem- en appgegevens, gebeurtenissen over appgebruik en het geschatte land of de regio afgeleid van het IP-adres. Dit is niet anoniem.</p>
+        <p>Advertentiepersonalisatie en het verzamelen van gedetailleerde locatiegegevens zijn uitgeschakeld in Analytics.</p>
+        <p>Meshtail beperkt zijn eigen gebeurtenissen per UTC-dag tot één gebeurtenis over taalgebruik, vijf taalwijzigingen en twintig bewerkingsresultaten. Deze limieten gelden niet voor de automatische levenscyclusgebeurtenissen van de SDK. Er wordt geen eigen gebruikers-ID of advertentietracking gebruikt. Chats, contacten, sleutels, getypte tekst, zoektermen, precieze locatie en ruwe radiogegevens worden niet bewust toegevoegd.</p>
+        <p>Als je gebruiksstatistieken uitschakelt, blokkeert de app nieuwe gebruiksgebeurtenissen en vraagt zij de SDK de verzameling te stoppen en lokale Analytics-gegevens te verwijderen. Deze lokale reset kan worden uitgesteld totdat Analytics opnieuw wordt geïnitialiseerd nadat je opnieuw toestemming geeft met internettoegang. SDK-werk dat al is gestart of in de wachtrij staat kan worden voltooid, en al verzonden gegevens kunnen niet worden teruggehaald. Deze lokale reset vraagt niet om verwijdering van gegevens die al op servers zijn opgeslagen.</p>
+        <p>Analytics is momenteel ingesteld om gegevens op gebeurtenisniveau 2 maanden en gegevens op gebruikersniveau 14 maanden te bewaren. Nieuwe activiteit laat de bewaartermijn op gebruikersniveau opnieuw beginnen. Deze limieten gelden niet voor standaard geaggregeerde rapporten. Google-diensten kunnen gegevens wereldwijd verwerken. Raadpleeg de privacyinformatie van Google voor details over verwerking en bewaring.</p>
+        <p><a href="https://policies.google.com/privacy?hl=nl">Privacyinformatie van Google</a></p>
+      </section>
+
+      <section aria-labelledby="support"><h2 id="support">Ondersteuning en openbare meldingen</h2>
+        <p>‘Hulp nodig?’ opent een concept in je e-mailapp. Er wordt alleen een diagnosebijlage gemaakt als je daarvoor kiest; je controleert en verzendt het bericht zelf. Het bestand kan app-/firmware- en radiogegevens, batterijniveau, activiteits- en fouttekst, verkorte node-ID’s, repeaterstatus en node-/kanaalnamen bevatten. Wachtwoorden of radiosleutels worden niet bewust opgenomen. E-mailaanbieders verwerken berichten volgens hun eigen beleid. We bewaren supportcorrespondentie alleen zolang dat nodig is om te antwoorden, onderzoek te doen en aan toepasselijke verplichtingen te voldoen. Mail ons voor verwijdering, met inachtneming van die verplichtingen.</p>
+        <p>Blokkeren en verbergen gelden alleen op je apparaat. Ze verwijderen geen berichten die al via het meshnetwerk zijn doorgestuurd en modereren geen inhoud voor anderen. Kanaalnamen en auteurscodes van rooms zijn niet geverifieerd en kunnen worden vervalst of gewijzigd.</p>
+        <p>‘Een fout melden’ opent een openbaar GitHub-formulier. Meshtail vult alleen appversie, platform en distributie in. Het plaatst niet automatisch een melding en voegt geen diagnostiek bij. Alles wat je daar indient is openbaar en valt onder de voorwaarden en bewaarregels van GitHub. Stuur privélogboeken of beveiligingszorgen in plaats daarvan per e-mail. Oudere versies kunnen je nog een zelfgeschreven e-mailmelding laten voorbereiden met de gekozen reden, gesprekstitel, berichttekst en tijd, en beschikbare afzendergegevens (de openbare sleutel van een direct contact of een niet-geverifieerde kanaalnaam of auteursprefix van een room). Die e-mail wordt niet automatisch verzonden: je controleert en verzendt hem zelf. Elke melding die je verstuurt wordt behandeld als supportcorrespondentie onder de bovenstaande voorwaarden. Meshtail biedt geen in-appfunctie om misbruik door berichten of afzenders te melden.</p>
+      </section>
+
+      <section aria-labelledby="choices"><h2 id="choices">Je keuzes en contact</h2>
+        <p>Je kunt rechten weigeren, Alleen offline gebruiken, crashrapportage uitschakelen, lokaal opgeslagen gegevens wissen en kiezen of je supportmateriaal verstuurt. Afhankelijk van waar je woont kan privacywetgeving je het recht geven om inzage, correctie of verwijdering van persoonsgegevens te vragen, of toestemming in te trekken. Verzoeken over gegevens die Meshtail ontvangt kun je sturen naar <a href="mailto:support@meshtail.app">support@meshtail.app</a>. We moeten het verzoek mogelijk verifiëren en kunnen informatie bewaren waar de wet dit vereist of toestaat. Gegevens die Firebase of een andere aanbieder rechtstreeks verwerkt kunnen ook onder de procedures en het beleid van die aanbieder vallen. Rechten en beschikbare rechtsmiddelen verschillen per rechtsgebied; dit beleid stelt niet dat elk recht overal geldt. We kunnen dit beleid bijwerken als het gedrag van de app verandert; de ingangsdatum hierboven verandert dan mee.</p>
+      </section>
+
+    </main>
+    <footer><p>Meshtail · Privacyvragen: <a href="mailto:support@meshtail.app">support@meshtail.app</a></p></footer>
+  </div>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#071321">
-  <meta name="description" content="Meshtail privacy policy: how the app handles local data, optional online features, crash reports, and support requests.">
+  <meta name="description" content="Meshtail privacy policy: how the app handles local data, optional online features, crash reports, optional usage statistics, and support requests.">
   <title>Privacy Policy · Meshtail</title>
   <style>
     :root { color-scheme: dark; --bg:#071321; --panel:#0d1d2e; --line:#1d3448; --text:#e9f3fa; --muted:#a7bbcb; --blue:#58a9ff; --teal:#58dfcf; }
@@ -31,17 +31,35 @@
     footer { padding-top:25px; color:var(--muted); font-size:.9rem; }
     @media (min-width:700px) { .wrap { padding-top:58px; } section { padding:29px 0 27px; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+    .language-nav { margin-top:24px; }
+    .language-nav ul { display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; list-style:none; }
+    .language-nav a { display:inline-block; padding:9px 12px; border:1px solid var(--line); border-radius:6px; }
+    .language-nav a[aria-current="page"] { color:var(--text); font-weight:700; border-color:var(--teal); }
+    .skip-link { position:absolute; left:16px; top:-100px; padding:12px 16px; background:var(--panel); z-index:10; }
+    .skip-link:focus { top:12px; }
+    .scope { color:var(--muted); }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#policy-content">Skip to privacy policy</a>
   <div class="wrap">
     <header>
       <div class="brand"><span class="mark" aria-hidden="true"></span>Meshtail</div>
       <p class="eyebrow">Privacy</p>
       <h1>Privacy Policy</h1>
-      <p class="effective">Effective October 1, 2026</p>
+      <p class="effective">Effective October 8, 2026</p>
+      <nav class="language-nav" aria-label="Policy language">
+        <ul>
+          <li><a href="./" lang="en" hreflang="en" aria-current="page">English</a></li>
+          <li><a href="./de/" lang="de" hreflang="de">Deutsch</a></li>
+          <li><a href="./nl/" lang="nl" hreflang="nl">Nederlands</a></li>
+          <li><a href="./fr/" lang="fr" hreflang="fr">Français</a></li>
+          <li><a href="./pl/" lang="pl" hreflang="pl">Polski</a></li>
+          <li><a href="./ru/" lang="ru" hreflang="ru">Русский</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
+    <main id="policy-content" tabindex="-1">
       <div class="intro"><p>Meshtail is a companion app for MeshCore radios, operated by Meshtail. Questions or deletion requests: <a href="mailto:support@meshtail.app">support@meshtail.app</a>.</p></div>
 
       <section aria-labelledby="device-radio"><h2 id="device-radio">Data on your device and radio</h2>
@@ -56,8 +74,18 @@
       </section>
 
       <section aria-labelledby="crashes"><h2 id="crashes">Optional crash reports</h2>
-        <p>Android crash reporting through Google Firebase Crashlytics is off by default. It requires both your “Share crash reports” choice and online access; you can turn it off in Settings. A report can include error categories and filtered stack frames; app version; device and operating-system details; timestamps; and Firebase/Crashlytics installation and session identifiers. Native reports may also include exception messages, thread and crash-state details. For connection or other operational errors, Meshtail may add bounded diagnostic details such as an operation category, a fixed connection stage and phase, outcome, elapsed time, a numeric platform error code, a process-local session counter, and negotiated Bluetooth MTU. When available, a generic radio model category, numeric firmware version, and protocol version may be included. Meshtail does not intentionally add radio names, addresses, public keys, raw frames, custom firmware labels, chats, contacts, precise location, or raw radio logs to its diagnostic context. Error text or native exception messages can still contain unexpected details. Usage analytics is not enabled.</p>
+        <p>Android crash reporting through Google Firebase Crashlytics is off by default. It requires both your “Share crash reports” choice and online access; you can turn it off in Settings. A report can include error categories and filtered stack frames; app version; device and operating-system details; timestamps; and Firebase/Crashlytics installation and session identifiers. Native reports may also include exception messages, thread and crash-state details. For connection or other operational errors, Meshtail may add bounded diagnostic details such as an operation category, a fixed connection stage and phase, outcome, elapsed time, a numeric platform error code, a process-local session counter, and negotiated Bluetooth MTU. When available, a generic radio model category, numeric firmware version, and protocol version may be included. Meshtail does not intentionally add radio names, addresses, public keys, raw frames, custom firmware labels, chats, contacts, precise location, or raw radio logs to its diagnostic context. Error text or native exception messages can still contain unexpected details. Usage statistics have a separate opt-in in Settings in versions that offer them.</p>
         <p>Turning reporting off blocks new optional submissions and requests deletion of reports still pending on the device. SDK work already started or queued may complete, and reports already sent cannot be recalled. Firebase states that Crashlytics keeps reports and associated identifiers for 90 days before beginning removal from live and backup systems; removal may take additional time. Firebase services may process data on global infrastructure. See <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a> for current data, processing, and retention details.</p>
+      </section>
+
+      <section aria-labelledby="analytics"><h2 id="analytics">Optional usage statistics</h2>
+        <p class="scope">The optional usage-statistics section applies to Meshtail 1.2.55 (68) and later releases that include this setting, on Android 9 or later.</p>
+        <p>Google Firebase Analytics is separate from crash reporting and is off by default. It requires both your separate usage-statistics opt-in in Settings and online access. Declining leaves all features available. Analytics receives app/system language, limited operation outcomes, installation/session identifiers, device, operating-system and app details, app-use events and approximate country/region derived from IP. This is not anonymous.</p>
+        <p>Advertising personalization and granular location-data collection are disabled in Analytics.</p>
+        <p>Meshtail limits its custom events to one language-usage event, five language-change events and twenty operation-outcome events per UTC day. These limits do not cap the SDK&#x27;s automatic lifecycle events. No custom user ID or advertising tracking is used. Chats, contacts, keys, typing, search terms, precise location and raw radio details are not intentionally attached.</p>
+        <p>Turning usage statistics off blocks new app usage events and requests that the SDK stop collection and delete local Analytics data. This local reset may be deferred until Analytics next initializes after you opt in again with online access. SDK work already started or queued may complete, and data already sent cannot be recalled. This local reset does not request deletion of data already held on servers.</p>
+        <p>Analytics is currently configured to retain event-level data for 2 months and user-level data for 14 months. New activity resets the user-level retention period. These limits do not apply to standard aggregated reports. Google services may process data globally. See Google&#x27;s privacy information for data processing and retention details.</p>
+        <p><a href="https://policies.google.com/privacy?hl=en">Google privacy information</a></p>
       </section>
 
       <section aria-labelledby="support"><h2 id="support">Support and public reports</h2>
@@ -74,4 +102,3 @@
   </div>
 </body>
 </html>
-
