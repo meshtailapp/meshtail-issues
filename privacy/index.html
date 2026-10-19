@@ -14,7 +14,7 @@
     a { color:#8ac5ff; text-decoration-thickness:1px; text-underline-offset:3px; }
     a:hover { color:var(--teal); }
     a:focus-visible { outline:3px solid var(--teal); outline-offset:4px; border-radius:2px; }
-    .wrap { width:min(100% - 32px, 850px); margin:0 auto; padding:44px 0 72px; }
+    .wrap { overflow-wrap:anywhere; width:min(100% - 32px, 850px); margin:0 auto; padding:44px 0 72px; }
     header { padding:0 0 30px; border-bottom:1px solid var(--line); }
     .brand { display:inline-flex; align-items:center; gap:10px; color:var(--text); font-weight:700; letter-spacing:.02em; }
     .mark { width:12px; height:12px; border:3px solid var(--teal); border-radius:50%; box-shadow:0 0 18px #58dfcf66; }
@@ -47,7 +47,7 @@
       <div class="brand"><span class="mark" aria-hidden="true"></span>Meshtail</div>
       <p class="eyebrow">Privacy</p>
       <h1>Privacy Policy</h1>
-      <p class="effective">Effective October 8, 2026</p>
+      <p class="effective">Effective October 19, 2026</p>
       <nav class="language-nav" aria-label="Policy language">
         <ul>
           <li><a href="./" lang="en" hreflang="en" aria-current="page">English</a></li>
@@ -71,11 +71,13 @@
       <section aria-labelledby="internet"><h2 id="internet">Optional internet access</h2>
         <p>Meshtail asks before its optional internet features run. Offline-only mode blocks new app-initiated optional third-party requests; requests already started or queued may complete. Already downloaded map tiles can still be shown. Turning on internet access does not itself publish your chats or radio keys.</p>
         <p>If you use online maps or download offline areas, the selected tile provider (OpenStreetMap, CARTO, Esri, OpenTopoMap, or Coalition) receives tile requests that indicate the map area and your IP address. Elevation/line-of-sight lookups send requested coordinates to Open-Meteo. Link previews, inline images, and links you choose to open contact their destination providers, which can see your IP address and the requested URL or area. Direct-APK update checks contact ve6btc.com; firmware-release checks may contact GitHub. Providers handle data under their own policies. Cached map tiles and downloaded areas stay on your device until you clear them or uninstall the app.</p>
+        <p>These app-controlled internet choices do not govern the independent Google ML Kit metrics described below.</p>
       </section>
 
       <section aria-labelledby="crashes"><h2 id="crashes">Optional crash reports</h2>
         <p>Android crash reporting through Google Firebase Crashlytics is off by default. It requires both your “Share crash reports” choice and online access; you can turn it off in Settings. A report can include error categories and filtered stack frames; app version; device and operating-system details; timestamps; and Firebase/Crashlytics installation and session identifiers. Native reports may also include exception messages, thread and crash-state details. For connection or other operational errors, Meshtail may add bounded diagnostic details such as an operation category, a fixed connection stage and phase, outcome, elapsed time, a numeric platform error code, a process-local session counter, and negotiated Bluetooth MTU. When available, a generic radio model category, numeric firmware version, and protocol version may be included. Meshtail does not intentionally add radio names, addresses, public keys, raw frames, custom firmware labels, chats, contacts, precise location, or raw radio logs to its diagnostic context. Error text or native exception messages can still contain unexpected details. Usage statistics have a separate opt-in in Settings in versions that offer them.</p>
         <p>Turning reporting off blocks new optional submissions and requests deletion of reports still pending on the device. SDK work already started or queued may complete, and reports already sent cannot be recalled. Firebase states that Crashlytics keeps reports and associated identifiers for 90 days before beginning removal from live and backup systems; removal may take additional time. Firebase services may process data on global infrastructure. See <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a> for current data, processing, and retention details.</p>
+        <p>Crash reporting and usage statistics are separate, default-off choices. Preview and Offline-only modes prevent new collection through these app-controlled paths; they do not control ML Kit metrics. If saving a changed choice fails, the app shows a warning. The previous saved choice may apply after restart if neither the denial nor its reset/deletion marker could be saved.</p>
       </section>
 
       <section aria-labelledby="analytics"><h2 id="analytics">Optional usage statistics</h2>
@@ -84,14 +86,29 @@
         <p>Advertising personalization and granular location-data collection are disabled in Analytics.</p>
         <p>Meshtail limits its custom events to one language-usage event, five language-change events and twenty operation-outcome events per UTC day. These limits do not cap the SDK&#x27;s automatic lifecycle events. No custom user ID or advertising tracking is used. Chats, contacts, keys, typing, search terms, precise location and raw radio details are not intentionally attached.</p>
         <p>Turning usage statistics off blocks new app usage events and requests that the SDK stop collection and delete local Analytics data. This local reset may be deferred until Analytics next initializes after you opt in again with online access. SDK work already started or queued may complete, and data already sent cannot be recalled. This local reset does not request deletion of data already held on servers.</p>
-        <p>Analytics is currently configured to retain event-level data for 2 months and user-level data for 14 months. New activity resets the user-level retention period. These limits do not apply to standard aggregated reports. Google services may process data globally. See Google&#x27;s privacy information for data processing and retention details.</p>
+        <p>As checked on October 19, 2026, Analytics is configured to retain event-level data for 2 months and user-level data for 14 months, with reset on new activity enabled. New activity can extend the user-identifier retention period. These settings do not mean every record disappears exactly 2 or 14 months after installation; standard aggregated reports are not governed by these controls. Sharing Analytics data with Google products and services is disabled. Google services may process data globally.</p>
         <p><a href="https://policies.google.com/privacy?hl=en">Google privacy information</a></p>
+        <p><a href="https://support.google.com/analytics/answer/7667196">Analytics data retention</a></p>
+      </section>
+
+      <section aria-labelledby="mlkit"><h2 id="mlkit">QR scanning and Google ML Kit</h2>
+        <p>On Android, optional QR scanning uses Google’s bundled ML Kit barcode scanner. Camera images and decoded QR contents are processed on the device; ML Kit says it does not send those inputs or results to Google. Starting the scanner also queues SDK diagnostic and usage metrics, even if no code is successfully scanned.</p>
+        <p>These metrics can include a random per-installation identifier; device manufacturer, model, operating-system version/build and available machine-learning hardware accelerators; app package name and version; feature initialization, detection and resource-release events; API configuration such as image format and resolution; input/output sizes, feature version, latency and error codes. Google uses these metrics to measure performance, debug, maintain and improve its APIs, and detect misuse or abuse.</p>
+        <p>ML Kit metrics operate independently of Meshtail’s Firebase crash-report and usage-statistics choices and are not governed by Meshtail’s online-access or Offline-only gates. You can use Meshtail without opening QR scanning. The current Android scanner integration does not offer a separate supported telemetry-off setting while retaining scanning. Avoiding future scans does not cancel metrics already queued or sent. Camera permission grants camera access; it is not a separate choice about Google’s metrics.</p>
+        <p>Meshtail has not verified a specific server-retention or per-user deletion timeframe for ML Kit metrics and does not promise one.</p>
+        <p><a href="https://developers.google.com/ml-kit/terms">ML Kit privacy terms</a> · <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a></p>
       </section>
 
       <section aria-labelledby="support"><h2 id="support">Support and public reports</h2>
         <p>“Need help?” opens a draft in your email app. A diagnostics attachment is made only if you choose it; you review and send the message yourself. That file can include app/firmware and radio details, battery level, activity and error text, shortened node identifiers, repeater health, and node/channel names. It does not intentionally include passwords or radio keys. Email providers process messages under their own policies. We keep support correspondence only as long as needed to respond, investigate, and meet applicable obligations; email us to request deletion, subject to those obligations.</p>
         <p>Meshtail does not offer in-app message or sender abuse reporting. Older releases may still let you prepare a user-composed email report containing your selected reason, conversation title, message text and time, and available sender information (a direct contact's public key or an unverified channel name or room-author prefix). That email is not sent automatically; you review and send it yourself, and any report you send is handled as support correspondence under the retention and deletion terms above. Blocking and hiding are local to your device. They do not remove messages already relayed through the mesh or moderate content for other people. Channel names and room-author codes are unverified and can be spoofed or changed.</p>
         <p>“Report a bug” opens a public GitHub form. Meshtail prefills only app version, platform, and distribution. It does not automatically post a report or attach diagnostics. Anything you submit there is public and subject to GitHub's terms and retention rules. Send private logs or security concerns by email instead.</p>
+      </section>
+
+      <section aria-labelledby="deletion"><h2 id="deletion">Deletion requests and limits</h2>
+        <p>To request deletion of information held by Meshtail, email <a href="mailto:support@meshtail.app">support@meshtail.app</a> with the subject “Privacy deletion request” and describe the information or support conversation concerned. For a support email, sending the request from the same address or identifying the conversation helps locate it. Do not send passwords, private keys or unrelated message histories. You may ask what information can be located and deleted before supplying further details.</p>
+        <p>Clearing app storage or uninstalling removes the local copy of app data, subject to copies retained in backups or exports. It does not erase messages or contacts already held by other mesh participants, nor data already sent to service providers. Local Analytics reset and deletion of unsent crash reports are not server-deletion requests.</p>
+        <p>Meshtail does not currently expose an in-app Analytics installation identifier or provide an automated per-installation server-deletion workflow. An email address alone may therefore be insufficient to associate a request with previously transmitted SDK records. Deletion of identifiable support correspondence can be handled separately. Identifying or deleting provider-held diagnostic data depends on the identifiers and facilities available for that service. A request is not confirmation that all provider records can be located or have been erased. No fixed provider-deletion completion time has been verified beyond the retention information above. Applicable privacy rights are unaffected by these technical limits.</p>
       </section>
 
       <section aria-labelledby="choices"><h2 id="choices">Your choices and contact</h2>
